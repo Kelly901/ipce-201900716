@@ -13,10 +13,5 @@ class Alumno:
 
 		return False
 
-	def dump(self):
-
-		return{
-
-			'carnet' : self.carnet,
-			'nombre' : self.nombre
-		}	
+	
+		

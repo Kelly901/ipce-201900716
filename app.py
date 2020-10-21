@@ -4,27 +4,25 @@ from flask_cors import CORS
 app = Flask(__name__)
 
 alumno = Alumno(201900716,"Kelly")
+def dump(self):
 
+		return{
 
-@app.route('/login',methods=['POST','GET'])
+			'carnet' : "201900716",
+			'nombre' : "Kelly"
+		}	
+
+@app.route('/login',methods=['GET'])
 
 def login():
 
 	if request.method == 'GET':
 
-		nombre=request.form.get('carnet')
-		password=request.form.get('nombre')
-
-		for user in miUsuario:
-
-			if user.autenticar(nombre,password)==True:
-
-				return user.dump()
-
-		return "False"		
+		return dump()		
 		
 	
 	
+
 
 @app.route("/")
 def index():
